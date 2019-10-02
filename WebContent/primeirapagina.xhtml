@@ -9,16 +9,20 @@
 <h:body>
 	<h:form id="formPessoa">
 	
-		<h:inputText id="campoNome"/> 
+		<h1>Olá JSF</h1>
+
+		Nome:
+		<h:inputText id="campoNome" value="#{pessoaBean.nome}" />
 		
-		<br/>
+		<h:commandButton value="Adicionar Nome" action="#{pessoaBean.addNome}"/>
+			
+	
+		<h:dataTable value="#{pessoaBean.nomes}" var="nome">
+			<h:column>
+				<h:outputText value="#{nome}"/>
+			</h:column>		
+		</h:dataTable>
 		
-		<h:outputText value="Teste jsf"/>	
-	
-		<br/>
-	
-		<h:commandButton value="Botão"/>
-	
 	</h:form>
 </h:body>
 </html>
