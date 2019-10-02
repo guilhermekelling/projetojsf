@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
 
-//@RequestScoped : temporario, apaga em cada requisição
-//
+//@RequestScoped : todos os objetos armazenados no escopo request, sobrevivem apenas a uma submissão ao ciclo de vida do JSF 
+//@ViewScoped :  mantém o estado do bean enquanto houver requisições da mesma view/página, e quando ele muda de página o estado do bean é descartado
 
 @ManagedBean(name = "pessoaBean")
-@RequestScoped
+@ViewScoped
 public class PessoaBean {
 	
 	private String nome;
