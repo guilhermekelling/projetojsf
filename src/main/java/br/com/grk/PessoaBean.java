@@ -3,16 +3,16 @@ package br.com.grk;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.faces.bean.ViewScoped;
 
 //@RequestScoped : todos os objetos armazenados no escopo request, sobrevivem apenas a uma submissão ao ciclo de vida do JSF 
 //@ViewScoped :  mantém o estado do bean enquanto houver requisições da mesma view/página, e quando ele muda de página o estado do bean é descartado
 //@SessionScoped: o estado do ManagedBean é mantido até o fim da sessão do usuário.
+//@ApplicationScoped: os dados serão compartilhados por todos os usuários
 
 @ManagedBean(name = "pessoaBean")
-@SessionScoped
+@ApplicationScoped
 public class PessoaBean {
 	
 	private String nome;
