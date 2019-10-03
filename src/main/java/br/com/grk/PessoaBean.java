@@ -12,8 +12,6 @@ import javax.faces.component.html.HtmlCommandButton;
 //@SessionScoped: o estado do ManagedBean é mantido até o fim da sessão do usuário.
 //@ApplicationScoped: os dados serão compartilhados por todos os usuários
 
-@ManagedBean(name = "pessoaBean")
-@ViewScoped
 public class PessoaBean {
 	
 	private String nome;
