@@ -12,7 +12,12 @@
 		<h1>Olá JSF</h1>
 
 		Nome:
-		<h:inputText id="campoNome" value="#{pessoaBean.nome}" />
+		<h:inputText id="campoNome" value="#{pessoaBean.nome}"/>
+		Senha:
+		<h:inputSecret id="senha" value="#{pessoaBean.senha}"/>
+		Texto:
+		<h:inputTextarea id="texto" value="#{pessoaBean.texto}" rows="10" cols="10"/>
+		
 		
 		<h:commandButton binding="#{pessoaBean.commandButton}" 
 		value="Adicionar Nome" action="#{pessoaBean.addNome}"/>
